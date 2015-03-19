@@ -6,15 +6,17 @@ public class Searcher {
 	private String input;
 	public int stopSymbol;
 	private String pattern;
+	public int patternsIndex;
 
 	public Searcher(String input, String pattern) {
 		this.input = input;
-		this.pattern = pattern;		
+		this.pattern = pattern;	
+		patternsIndex = pattern.length()-1;
 	}
 
 	public void find() {
 
-		int patternsIndex = pattern.length()-1;
+		
 		if(pattern.charAt(patternsIndex) != input.charAt(next + patternsIndex)){
 			if(pattern.lastIndexOf(input.charAt(next + patternsIndex))!=-1){
 			next = patternsIndex-pattern.lastIndexOf(input.charAt(next + patternsIndex));		
@@ -23,6 +25,9 @@ public class Searcher {
 				next = next + pattern.length();
 				stopSymbol=0;
 			}
+			patternsIndex=pattern.length()-1;
+		} else {
+			patternsIndex--;
 		}
 		
 		
