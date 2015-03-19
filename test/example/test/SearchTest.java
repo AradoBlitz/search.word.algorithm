@@ -50,12 +50,7 @@ public class SearchTest {
 		searcher.find();
 		assertEquals(0, searcher.patternsIndex);
 		searcher.find();
-		assertEquals(-1, searcher.patternsIndex);
-		try{
-			searcher.find();
-			assertEquals(2, searcher.patternsIndex);
-		}catch(IndexOutOfBoundsException e){
-			fail();
-		}
+		assertEquals(2, searcher.patternsIndex);
+		
 	}
 }
