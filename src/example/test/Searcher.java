@@ -15,12 +15,12 @@ public class Searcher {
 	public void find() {
 
 		if(pattern.charAt(12) != input.charAt(next + 12)){
-			if(pattern.indexOf(input.charAt(next + 12))!=-1){
-			next = 6;		
+			if(pattern.lastIndexOf(input.charAt(next + 12))!=-1){
+			next = 12-pattern.lastIndexOf(input.charAt(next + 12));		
 			stopSymbol=12;
 			} else {
-				next = 18;
-				stopSymbol=17;
+				next = next + pattern.length();
+				stopSymbol=0;
 			}
 		}
 		

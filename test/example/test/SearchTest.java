@@ -12,12 +12,12 @@ public class SearchTest {
 		Searcher searcher = new Searcher("* * * * * * к * * * * * *"
 											,"к о л о к о л");
 		searcher.find();
-		assertEquals(6, searcher.next);
+		assertEquals(4, searcher.next);
 		assertEquals(12, searcher.stopSymbol);
 		
 		searcher.find();
-		assertEquals(18, searcher.next);
-		assertEquals(17, searcher.stopSymbol);
+		assertEquals(17, searcher.next);
+		assertEquals(0, searcher.stopSymbol);
 		
 	}
 }
