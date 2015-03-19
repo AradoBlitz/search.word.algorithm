@@ -37,4 +37,11 @@ public class Searcher {
 		
 	}
 
+	public void find() {
+		next();		
+		next();		
+		next();
+		
+	}
+
 }

@@ -54,4 +54,15 @@ public class SearchTest {
 		assertEquals(0, searcher.begin);
 		
 	}
+	
+	@Test
+	public void findSequanceInLoop() throws Exception {
+		
+		Searcher searcher = new Searcher("qwe", "qwe");
+		
+		searcher.find();
+		assertEquals(2, searcher.patternsIndex);
+		assertEquals(0, searcher.begin);
+		
+	}
 }
