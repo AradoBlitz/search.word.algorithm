@@ -14,10 +14,11 @@ public class Searcher {
 
 	public void find() {
 
-		if(pattern.charAt(12) != input.charAt(next + 12)){
-			if(pattern.lastIndexOf(input.charAt(next + 12))!=-1){
-			next = 12-pattern.lastIndexOf(input.charAt(next + 12));		
-			stopSymbol=12;
+		int patternsIndex = pattern.length()-1;
+		if(pattern.charAt(patternsIndex) != input.charAt(next + patternsIndex)){
+			if(pattern.lastIndexOf(input.charAt(next + patternsIndex))!=-1){
+			next = patternsIndex-pattern.lastIndexOf(input.charAt(next + patternsIndex));		
+			stopSymbol=patternsIndex;
 			} else {
 				next = next + pattern.length();
 				stopSymbol=0;
