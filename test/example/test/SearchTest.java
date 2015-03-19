@@ -8,12 +8,16 @@ public class SearchTest {
 
 	@Test
 	public void testName() throws Exception {
-	
-		Searcher searcher = new Searcher(" * * * * * * к * * * * * *"
-										    , "к о л о к о л");
+		
+		Searcher searcher = new Searcher("* * * * * * к * * * * * *"
+											,"к о л о к о л");
 		searcher.find();
 		assertEquals(6, searcher.next);
-		assertEquals(13, searcher.stopSymbol);
+		assertEquals(12, searcher.stopSymbol);
+		
+		searcher.find();
+		assertEquals(18, searcher.next);
+		assertEquals(17, searcher.stopSymbol);
 		
 	}
 }
