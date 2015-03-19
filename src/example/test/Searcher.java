@@ -29,7 +29,8 @@ public class Searcher {
 		} else {
 			patternsIndex--;
 		}
-		
+		if(patternsIndex<0)
+			patternsIndex=pattern.length()-1;
 		
 	}
 
