@@ -64,5 +64,11 @@ public class SearchTest {
 		assertEquals(2, searcher.patternsIndex);
 		assertEquals(0, searcher.begin);
 		
+		searcher = new Searcher("**qwe", "qwe");
+		
+		searcher.find();
+		assertEquals(2, searcher.patternsIndex);
+		assertEquals(2, searcher.begin);
+		
 	}
 }
