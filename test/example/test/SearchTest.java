@@ -54,7 +54,12 @@ public class SearchTest {
 		assertEquals(0, searcher.begin);
 		
 	}
-	
+	/* Finish investigation part. From this point search algorithm is clear.
+	 * 1-st evristick. Some control parameters is accessed and ease for checking.
+	 *  Next steps could be incapsulating algorithm parameters and tests would
+	 *  contains examples with inputs and search patterns only. Another variant
+	 *  is make current Sercher class to SearchEngine and pathed it Search class
+	 *  whit find method.*/
 	@Test
 	public void findSequanceInLoop() throws Exception {
 		
@@ -71,4 +76,6 @@ public class SearchTest {
 		assertEquals(2, searcher.begin);
 		
 	}
+	
+	/* Next step is implement multiple search result. */
 }
