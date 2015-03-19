@@ -7,6 +7,7 @@ public class Searcher {
 	public int stopSymbol;
 	private String pattern;
 	public int patternsIndex;
+	public int begin = -1;
 
 	public Searcher(String input, String pattern) {
 		this.input = input;
@@ -14,7 +15,7 @@ public class Searcher {
 		patternsIndex = pattern.length()-1;
 	}
 
-	public void find() {
+	public void next() {
 
 		
 		if(pattern.charAt(patternsIndex) != input.charAt(next + patternsIndex)){
@@ -29,8 +30,10 @@ public class Searcher {
 		} else {
 			patternsIndex--;
 		}
-		if(patternsIndex<0)
+		if(patternsIndex<0){
+			begin = next;
 			patternsIndex=pattern.length()-1;
+		}
 		
 	}
 
