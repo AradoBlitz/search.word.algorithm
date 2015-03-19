@@ -38,10 +38,8 @@ public class Searcher {
 	}
 
 	public void find() {
-		next();		
-		next();		
-		next();
-		
+		while(begin==-1)
+			next();		
 	}
 
 }
