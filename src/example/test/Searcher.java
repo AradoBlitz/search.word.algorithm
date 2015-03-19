@@ -17,7 +17,8 @@ public class Searcher {
 	public void find() {
 		// TODO Auto-generated method stub
 		int countDown = next + string2.length();
-		if(string2.charAt(7) != string.charAt(countDown)){
+		int patternCountDown = string2.length()-1;
+		if(string2.charAt(patternCountDown) != string.charAt(countDown)){
 			stopSymbol = countDown;
 			int lastIndexOf = string2.lastIndexOf(string.charAt(countDown));
 			if(lastIndexOf != -1){
