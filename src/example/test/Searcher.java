@@ -9,13 +9,14 @@ public class Searcher {
 
 	public Searcher(String input, String pattern) {
 		this.input = input;
-		this.pattern = pattern;
-		
+		this.pattern = pattern;		
 	}
 
 	public void find() {
 
-		next = 6;
+		if(pattern.charAt(12) != input.charAt(12))
+			next = 6;
+		
 		stopSymbol=13;
 		
 	}
