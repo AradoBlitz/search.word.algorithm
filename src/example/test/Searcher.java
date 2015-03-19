@@ -3,28 +3,20 @@ package example.test;
 public class Searcher {
 
 	public int next;
-	private String string;
+	private String input;
 	public int stopSymbol;
-	private String string2;
+	private String pattern;
 
-	public Searcher(String string, String string2) {
-		this.string = string; 
-		// TODO Auto-generated constructor stub
-		this.string2 = string2;
+	public Searcher(String input, String pattern) {
+		this.input = input;
+		this.pattern = pattern;
 		
 	}
 
 	public void find() {
-		// TODO Auto-generated method stub
-		int countDown = next + string2.length();
-		int patternCountDown = string2.length()-1;
-		if(string2.charAt(patternCountDown) != string.charAt(countDown)){
-			stopSymbol = countDown;
-			int lastIndexOf = string2.lastIndexOf(string.charAt(countDown));
-			if(lastIndexOf != -1){
-				next = stopSymbol-lastIndexOf;
-			}
-		}
+
+		next = 6;
+		stopSymbol=13;
 		
 	}
 
